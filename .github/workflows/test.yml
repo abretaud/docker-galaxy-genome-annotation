@@ -23,7 +23,6 @@ jobs:
       - name: Run the newly built Docker image
         run: |
           make docker_run
-          sleep 300
       - name: Check API availability
         run: make test_api
       - name: Run FTP tests

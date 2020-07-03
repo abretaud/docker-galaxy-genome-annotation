@@ -10,10 +10,6 @@ ENV GALAXY_CONFIG_CONDA_AUTO_INSTALL=True \
 	ENABLE_TTS_INSTALL=True \
 	GALAXY_CONFIG_BRAND="Genome Annotation"
 
-# Install required python packages before installing tools from toolshed
-ADD postinst.sh /bin/postinst
-RUN postinst
-
 ENV GALAXY_WEBAPOLLO_URL="http://apollo:8080/apollo" \
     GALAXY_WEBAPOLLO_USER="admin@local.host" \
     GALAXY_WEBAPOLLO_PASSWORD=password \
